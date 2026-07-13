@@ -83,7 +83,8 @@
     .gallery-grid img:nth-child(4) { grid-column:span 2; }
     .cta { padding:0; }
     .cta-box { background:linear-gradient(110deg,#06203a,#0f639c); border-radius:24px; padding:62px; color:#fff; display:grid; grid-template-columns:minmax(0,1.35fr) minmax(0,0.9fr); align-items:center; gap:34px; overflow:hidden; position:relative; }
-    .cta-box:after { content:'MAX'; position:absolute; right:-13px; bottom:-76px; font:800 13rem Manrope; color:rgba(255,255,255,.05); }
+    .cta-box:after { content:'MAX'; position:absolute; right:-13px; bottom:-76px; font:800 13rem Manrope; color:rgba(255,255,255,.05); pointer-events:none; z-index:0; }
+    .cta-box > div { position:relative; z-index:1; }
     .cta-box .button { min-width:220px; }
     .cta-box h2 { max-width:620px; }
     .cta-box p { color:#c8e8f7; margin:0; }
