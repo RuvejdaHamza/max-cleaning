@@ -82,11 +82,20 @@
     .gallery-grid img:first-child { grid-row:span 2; }
     .gallery-grid img:nth-child(4) { grid-column:span 2; }
     .cta { padding:0; }
-    .cta-box { background:linear-gradient(110deg,#06203a,#0f639c); border-radius:20px; padding:60px; color:#fff; display:flex; justify-content:space-between; align-items:center; gap:30px; overflow:hidden; position:relative; }
+    .cta-box { background:linear-gradient(110deg,#06203a,#0f639c); border-radius:24px; padding:62px; color:#fff; display:grid; grid-template-columns:minmax(0,1.35fr) minmax(0,0.9fr); align-items:center; gap:34px; overflow:hidden; position:relative; }
     .cta-box:after { content:'MAX'; position:absolute; right:-13px; bottom:-76px; font:800 13rem Manrope; color:rgba(255,255,255,.05); }
-    .cta-box .button { width:190px; }
-    .cta-box h2 { max-width:650px; }
+    .cta-box .button { min-width:220px; }
+    .cta-box h2 { max-width:620px; }
     .cta-box p { color:#c8e8f7; margin:0; }
+    .contact-actions { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-top:24px; }
+    .contact-actions a { display:flex; align-items:center; gap:14px; padding:18px 24px; border-radius:999px; text-decoration:none; font-weight:800; color:#fff; background:rgba(255,255,255,.09); border:1px solid rgba(255,255,255,.18); box-shadow:0 20px 48px rgba(0,0,0,.14); backdrop-filter:blur(12px); transition:.25s ease, transform .2s ease; min-height:72px; }
+    .contact-actions a:hover { transform:translateY(-3px); box-shadow:0 24px 56px rgba(0,0,0,.18); }
+    .contact-actions a.primary { background:linear-gradient(135deg,#f5dd57,#d7f05a); color:#031426; border-color:transparent; }
+    .contact-actions a span { display:grid; place-items:center; width:44px; height:44px; border-radius:50%; background:rgba(255,255,255,.2); font-size:1rem; font-weight:700; }
+    .contact-actions a .icon-viber { background:#7b68ee; color:#fff; }
+    .contact-actions a .icon-instagram { background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4); color:#fff; }
+    .contact-actions a .icon-facebook { background:#1877f2; color:#fff; }
+    .contact-actions a .label { display:block; font-size:.96rem; line-height:1.3; text-align:left; }
     footer { padding:35px 0; background:#031426; color:#b9d0df; font-size:.9rem; }
     .footer-inner { display:flex; justify-content:space-between; gap:20px; align-items:center; }
     .footer-inner strong { color:#fff; }
@@ -108,7 +117,7 @@
   <header class="nav">
     <div class="container nav-inner">
       <a class="brand" href="#ballina" aria-label="MAX Cleaning"><img src="MAX/photos/logo.png" alt="MAX Cleaning"></a>
-      <nav class="nav-links" aria-label="Navigimi kryesor"><a href="#sherbimet">Shërbimet</a><a href="#galeria">Galeria</a><a href="#kontakti" class="call">Na shkruani në Viber</a></nav>
+      <nav class="nav-links" aria-label="Navigimi kryesor"><a href="#sherbimet">Shërbimet</a><a href="#galeria">Galeria</a><a href="#kontakti" class="call">Na kontaktoni</a></nav>
     </div>
   </header>
   <main>
@@ -132,7 +141,7 @@
     <section class="info"><div class="container"><div class="section-label">Lokacioni & Orari</div><h2>Gati për të na vizituar ose për të marrë një ofertë.</h2><div class="info-grid"><div class="info-box"><h3>Lokacioni</h3><p>Klinë, e Epërme, Skënderaj, Mitrovicë dhe rrethina.<br>Transport falas në zonat përmendura.</p></div><div class="info-box"><h3>Orari i punës</h3><p>E hënë – e premte: 08:00 – 20:00<br>E shtunë: 09:00 – 16:00</p></div><div class="info-box"><h3>Kërko ofertë</h3><p>Na shkruani për çmim orientues për shtëpi, zyrë ose ambient tjetër.</p><a class="button button-primary" href="viber://chat?number=+38349747111" target="_blank" rel="noopener">Kërko ofertë</a></div></div></div></section>
     <section class="testimonial-section"><div class="container"><div class="section-label">Vlerësime nga klientët</div><h2>Çfarë thonë ata që na kanë besuar.</h2><div class="testimonial-grid"><article class="testimonial"><div class="stars">★★★★★</div><p>“Rezultati ishte i shkëlqyer, tepihët dukeshin plotësisht të rinj.”</p><strong>Aida</strong></article><article class="testimonial"><div class="stars">★★★★★</div><p>“Shërbimi ishte i shpejtë, i pastër dhe shumë profesional.”</p><strong>Besnik</strong></article><article class="testimonial"><div class="stars">★★★★★</div><p>“Na ndihmuan të kthejmë pamjen e shtëpisë pa problem.”</p><strong>Arlind</strong></article></div></div></section>
     <section class="gallery" id="galeria"><div class="container"><div class="section-label">Galeria jonë</div><h2>Punë profesionale në veprim.</h2><div class="gallery-grid"><img src="MAX/photos/IMG_0134.jpeg" alt="Makineri profesionale duke pastruar tepihun"><img src="MAX/photos/image0%20%281%29.jpeg" alt="Procesi i larjes së tepihave"><img src="MAX/photos/image0%20%282%29.jpeg" alt="Pajisje MAX Cleaning"><img src="MAX/photos/image3.jpeg" alt="Detaje nga procesi i pastrimit"></div></div></section>
-    <section class="cta" id="kontakti"><div class="container"><div class="cta-box"><div><div class="section-label" style="color:#d7f05a">Na shkruani në Viber</div><h2>Jepini tepihave tuaj kujdesin që meritojnë.</h2><p>Na shkruani direkt në Viber për më shumë informata, ofertë ose takim.</p></div><div><div class="contact-actions"><a class="primary" href="viber://chat?number=+38349747111" target="_blank" rel="noopener"><span class="icon-viber">V</span>Viber · 049 747 111</a><a href="viber://chat?number=+38349432393" target="_blank" rel="noopener"><span class="icon-viber">V</span>Viber · 049 432 393</a><a href="https://www.instagram.com/max.cleaning02" target="_blank" rel="noopener"><span class="icon-instagram">IG</span>Instagram</a><a href="https://www.facebook.com/mccc1276?__cft__[0]=AZYOnjnJcvVlfW1XN8fPDV01FlMqjk8k1fccYLFsNOSAcrc8R7e4dfi6-xf7UVHN6a9WXI11EBuzM0ovUA_FEApEQWogK4d7CWZ4d3VMM9d-KhhHX7vYolZlsYdNRQTX9XSIbJWFy9kf0cs3THoeV_Q2alxvsBvRmtHz2Zk2DEKAxQ&__tn__=-UC%2CP-R" target="_blank" rel="noopener"><span class="icon-facebook">f</span>Facebook</a></div></div></div></div></section>
+    <section class="cta" id="kontakti"><div class="container"><div class="cta-box"><div><div class="section-label" style="color:#d7f05a">Na shkruani në Viber</div><h2>Jepini tepihave tuaj kujdesin që meritojnë.</h2><p>Na shkruani direkt në Viber për më shumë informata, ofertë ose takim.</p></div><div><div class="contact-actions"><a class="primary" href="viber://chat?number=+38349747111" target="_blank" rel="noopener"><span class="icon-viber">V</span><span class="label">MAX Cleaning · 049 747 111</span></a><a href="viber://chat?number=+38349432393" target="_blank" rel="noopener"><span class="icon-viber">V</span><span class="label">MAX Cleaning · 049 432 393</span></a><a href="https://www.instagram.com/max.cleaning02" target="_blank" rel="noopener"><span class="icon-instagram">IG</span><span class="label">MAX Cleaning</span></a><a href="https://www.facebook.com/mccc1276?__cft__[0]=AZYOnjnJcvVlfW1XN8fPDV01FlMqjk8k1fccYLFsNOSAcrc8R7e4dfi6-xf7UVHN6a9WXI11EBuzM0ovUA_FEApEQWogK4d7CWZ4d3VMM9d-KhhHX7vYolZlsYdNRQTX9XSIbJWFy9kf0cs3THoeV_Q2alxvsBvRmtHz2Zk2DEKAxQ&__tn__=-UC%2CP-R" target="_blank" rel="noopener"><span class="icon-facebook">f</span><span class="label">MAX Cleaning</span></a></div></div></div></div></section>
   </main>
   <footer><div class="container footer-inner"><div><strong>MAX Cleaning</strong><br><span>Kompania për larjen e tepihave</span></div><span>© 2026 MAX Cleaning</span></div></footer>
 </body>
